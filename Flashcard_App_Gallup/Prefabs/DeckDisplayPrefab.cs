@@ -16,7 +16,9 @@ namespace Flashcard_App_Gallup.Prefabs
 		{
 			InitializeComponent();
 			if(decks.Length != 0)
-			{		
+			{
+				this.decks = new List<Deck>();
+				this.displayedPrefabs = new List<DeckPrefab>();
 				SetDecks(decks);
 				DisplayPrefabs();
 			}
@@ -28,16 +30,17 @@ namespace Flashcard_App_Gallup.Prefabs
 			pnl_container.Height = decks.Count * 200; // 200 is the height of the DeckPrefab
 			int[] heights = new int[decks.Count];
 			heights[0] = 0;
+			DeckPrefab[] notDisplayedPrefabs = new DeckPrefab[decks.Count];
 			for ( int i = 0; i < decks.Count; i++)
 			{
 				if(i > 0)
 				{
 					heights[i] = heights[i - 1] += 200;
 				}
-				displayedPrefabs[i] = new DeckPrefab(decks[i]);
+				notDisplayedPrefabs[i] = new DeckPrefab(decks[i]);
+				displayedPrefabs.Add(notDisplayedPrefabs[i]);
 				this.pnl_container.Controls.Add(displayedPrefabs[i]);
 				displayedPrefabs[i].Show();
-				//displayedPrefabs[i].Height = heights[i];
 			}
 		}
 

@@ -8,33 +8,18 @@ namespace Flashcard_App_Gallup
 {
 	public static class SaveManager
 	{
-		public static void SaveData(User user)
+		private static string savePathString = Environment.GetFolderPath
+			(Environment.SpecialFolder.CommonApplicationData);
+		private static string path = Path.Combine(savePathString, "save.txt");
+
+		public static void SaveData()
 		{
-			Path path = new Path();
-			BinaryFormatter formatter = new BinaryFormatter();
-			FileStream stream = new FileStream(path, FileMode.Create);
 
-
-			formatter.Serialize(stream, data);
-			stream.Close();
 		}
 
-		public static Data LoadData()
+		public static void LoadData()
 		{
-			if (File.Exists(path))
-			{
-				BinaryFormatter formatter = new BinaryFormatter();
-				FileStream stream = new FileStream(path, FileMode.Open);
 
-				UserData data = formatter.Deserialize(stream) as UserData;
-				stream.Close();
-				return data;
-			}
-			else
-			{
-				Debug.LogError("Save file not found in " + path);
-				return null;
-			}
 		}
 	}
 }

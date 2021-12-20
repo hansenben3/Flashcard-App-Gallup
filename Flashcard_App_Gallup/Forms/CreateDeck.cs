@@ -23,11 +23,11 @@ namespace Flashcard_App_Gallup.Forms
 			if(home == null)
 			{
 				home = new Home();
-				home.Show();
+				home.CustomRefresh();
 			}
 			else
 			{
-				home.Show();
+				home.CustomRefresh();
 			}
 			
 		}
@@ -40,11 +40,11 @@ namespace Flashcard_App_Gallup.Forms
 			if (home == null)
 			{
 				home = new Home();
-				home.Show();
+				home.CustomRefresh();
 			}
 			else
 			{
-				home.Show();
+				home.CustomRefresh();
 			}
 		}
 	}
