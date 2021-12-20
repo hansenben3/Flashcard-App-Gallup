@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Flashcard_App_Gallup/1.0.0": {
+        "runtime": {
+          "Flashcard_App_Gallup.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Flashcard_App_Gallup/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
