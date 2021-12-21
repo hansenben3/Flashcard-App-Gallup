@@ -82,6 +82,7 @@ namespace Flashcard_App_Gallup
 			this.btn_delete.TabIndex = 5;
 			this.btn_delete.Text = "Delete";
 			this.btn_delete.UseVisualStyleBackColor = true;
+			this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
 			// 
 			// lbl_description
 			// 
@@ -96,6 +97,8 @@ namespace Flashcard_App_Gallup
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+			this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.Controls.Add(this.lbl_description);
 			this.Controls.Add(this.btn_delete);
 			this.Controls.Add(this.btn_study);
@@ -103,7 +106,7 @@ namespace Flashcard_App_Gallup
 			this.Controls.Add(this.btn_view);
 			this.Controls.Add(this.lbl_name);
 			this.Name = "DeckPrefab";
-			this.Size = new System.Drawing.Size(800, 200);
+			this.Size = new System.Drawing.Size(798, 198);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

@@ -43,18 +43,32 @@ namespace Flashcard_App_Gallup
 			return error;
 		}
 
-
-		// Save system to be implimented
 		public static void SaveData()
 		{
-
+			if(decks.Count != 0)
+			{
+				string toBeSaved = CustomSerializer.Serialize(decks[0]);
+				for ( int i = 1; i < decks.Count; i++)
+				{
+					toBeSaved += "?" + CustomSerializer.Serialize(decks[i]);
+				}
+				SaveManager.SaveData(toBeSaved);
+			}
 		}
 
 		public static void LoadData()
 		{
+			string returnedString = SaveManager.LoadData();
 			decks = new List<Deck>();
+			if(returnedString != null)
+			{
+				string[] arr = returnedString.Split("?");
+				for (int i = 0; i < arr.Length; i++)
+				{
+					decks.Add(CustomSerializer.Deserialize(arr[i]));
+				}
+			}
 		}
 
-		// Save system to be implimented
 	}
 }

@@ -29,39 +29,34 @@ namespace Flashcard_App_Gallup.Prefabs
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-			this.pnl_container = new System.Windows.Forms.Panel();
+			this.pnl_container = new System.Windows.Forms.FlowLayoutPanel();
 			this.SuspendLayout();
-			// 
-			// vScrollBar1
-			// 
-			this.vScrollBar1.Location = new System.Drawing.Point(883, 25);
-			this.vScrollBar1.Name = "vScrollBar1";
-			this.vScrollBar1.Size = new System.Drawing.Size(17, 450);
-			this.vScrollBar1.TabIndex = 0;
 			// 
 			// pnl_container
 			// 
+			this.pnl_container.AutoScroll = true;
+			this.pnl_container.AutoSize = true;
+			this.pnl_container.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
 			this.pnl_container.Location = new System.Drawing.Point(25, 25);
 			this.pnl_container.Name = "pnl_container";
 			this.pnl_container.Size = new System.Drawing.Size(850, 450);
 			this.pnl_container.TabIndex = 1;
+			this.pnl_container.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_container_Paint);
 			// 
-			// DisplayPrefab
+			// DeckDisplayPrefab
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.vScrollBar1);
+			this.AutoScroll = true;
 			this.Controls.Add(this.pnl_container);
-			this.Name = "DisplayPrefab";
+			this.Name = "DeckDisplayPrefab";
 			this.Size = new System.Drawing.Size(900, 500);
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.VScrollBar vScrollBar1;
-		private System.Windows.Forms.Panel pnl_container;
+		private System.Windows.Forms.FlowLayoutPanel pnl_container;
 	}
 }

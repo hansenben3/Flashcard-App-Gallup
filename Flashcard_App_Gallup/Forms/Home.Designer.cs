@@ -34,6 +34,7 @@ namespace Flashcard_App_Gallup
 			this.btn_createDeck = new System.Windows.Forms.Button();
 			this.lbl_decks = new System.Windows.Forms.Label();
 			this.pnl_decklist = new System.Windows.Forms.Panel();
+			this.lbl_deckcount = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// lbl_title
@@ -56,6 +57,7 @@ namespace Flashcard_App_Gallup
 			this.btn_exit.TabIndex = 1;
 			this.btn_exit.Text = "Exit";
 			this.btn_exit.UseVisualStyleBackColor = true;
+			this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
 			// 
 			// btn_createDeck
 			// 
@@ -80,17 +82,31 @@ namespace Flashcard_App_Gallup
 			// 
 			// pnl_decklist
 			// 
+			this.pnl_decklist.AutoScroll = true;
+			this.pnl_decklist.AutoSize = true;
 			this.pnl_decklist.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.pnl_decklist.Location = new System.Drawing.Point(12, 194);
+			this.pnl_decklist.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.pnl_decklist.Location = new System.Drawing.Point(10, 200);
 			this.pnl_decklist.Name = "pnl_decklist";
-			this.pnl_decklist.Size = new System.Drawing.Size(870, 417);
+			this.pnl_decklist.Size = new System.Drawing.Size(870, 500);
 			this.pnl_decklist.TabIndex = 5;
+			// 
+			// lbl_deckcount
+			// 
+			this.lbl_deckcount.AutoSize = true;
+			this.lbl_deckcount.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.lbl_deckcount.Location = new System.Drawing.Point(673, 79);
+			this.lbl_deckcount.Name = "lbl_deckcount";
+			this.lbl_deckcount.Size = new System.Drawing.Size(122, 28);
+			this.lbl_deckcount.TabIndex = 6;
+			this.lbl_deckcount.Text = "Deck Count :";
 			// 
 			// Home
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(894, 623);
+			this.ClientSize = new System.Drawing.Size(894, 714);
+			this.Controls.Add(this.lbl_deckcount);
 			this.Controls.Add(this.pnl_decklist);
 			this.Controls.Add(this.lbl_decks);
 			this.Controls.Add(this.btn_exit);
@@ -110,6 +126,7 @@ namespace Flashcard_App_Gallup
 		private System.Windows.Forms.Button btn_createDeck;
 		private System.Windows.Forms.Label lbl_decks;
 		private System.Windows.Forms.Panel pnl_decklist;
+		private System.Windows.Forms.Label lbl_deckcount;
 	}
 }
 

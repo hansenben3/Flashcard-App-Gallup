@@ -13,5 +13,8 @@
     <Compile Update="Prefabs\DeckDisplayPrefab.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Prefabs\ErrorPrompt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

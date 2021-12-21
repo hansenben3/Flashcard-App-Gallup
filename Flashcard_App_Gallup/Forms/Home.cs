@@ -32,6 +32,7 @@ namespace Flashcard_App_Gallup
 
 		public void CustomRefresh()
 		{
+			this.lbl_deckcount.Text = "Deck Count : " + Data.GetDecks().Length;
 			if (!this.Visible)
 			{
 				this.Show();
@@ -40,6 +41,11 @@ namespace Flashcard_App_Gallup
 			this.pnl_decklist.Controls.Add(display);
 			this.display.Show();
 
+		}
+
+		private void btn_exit_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }

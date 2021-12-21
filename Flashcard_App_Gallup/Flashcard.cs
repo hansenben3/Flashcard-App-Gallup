@@ -6,9 +6,16 @@ namespace Flashcard_App_Gallup
 {
 	public class Flashcard
 	{
-		private bool showingFront = true;
+		private bool showingFront;
 		private string frontText;
 		private string backText;
+
+		public Flashcard(string front, string back)
+		{
+			showingFront = true;
+			frontText = front;
+			backText = back;
+		}
 
 		public string GetFront()
 		{
