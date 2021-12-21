@@ -105,7 +105,7 @@ namespace Flashcard_App_Gallup
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(894, 714);
+			this.ClientSize = new System.Drawing.Size(884, 711);
 			this.Controls.Add(this.lbl_deckcount);
 			this.Controls.Add(this.pnl_decklist);
 			this.Controls.Add(this.lbl_decks);

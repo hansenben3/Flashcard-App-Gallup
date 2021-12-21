@@ -111,7 +111,7 @@ namespace Flashcard_App_Gallup.Forms
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(893, 584);
+			this.ClientSize = new System.Drawing.Size(884, 711);
 			this.Controls.Add(this.txt_description);
 			this.Controls.Add(this.txt_name);
 			this.Controls.Add(this.btn_submit);

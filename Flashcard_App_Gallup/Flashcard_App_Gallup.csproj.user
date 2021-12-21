@@ -4,6 +4,15 @@
     <Compile Update="Forms\CreateDeck.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\DeckEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\DeckStudy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\DeckView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\ErrorPrompt.cs">
       <SubType>Form</SubType>
     </Compile>

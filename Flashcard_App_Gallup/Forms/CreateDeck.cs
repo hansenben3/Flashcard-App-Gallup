@@ -34,7 +34,7 @@ namespace Flashcard_App_Gallup.Forms
 
 		private void btn_submit_Click(object sender, EventArgs e)
 		{
-			Data.AddDeck(new Deck(lbl_name.Text, lbl_description.Text));
+			Data.AddDeck(new Deck(txt_name.Text, txt_description.Text));
 			Data.SaveData();
 			this.Close();
 			if (home == null)

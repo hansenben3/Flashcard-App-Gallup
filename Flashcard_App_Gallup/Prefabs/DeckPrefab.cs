@@ -13,7 +13,7 @@ namespace Flashcard_App_Gallup
 	{
 		private Deck deck;
 		public DeckPrefab(Deck deck)
-		{
+		{	
 			InitializeComponent();
 			SetDeck(deck);
 		}

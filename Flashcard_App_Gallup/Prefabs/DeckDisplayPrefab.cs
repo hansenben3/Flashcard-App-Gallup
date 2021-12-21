@@ -45,16 +45,11 @@ namespace Flashcard_App_Gallup.Prefabs
 			}
 		}
 
-		public void AddDeck(Deck deck)
-		{
-			decks.Add(deck);
-		}
-
 		private void SetDecks(Deck[] decks)
 		{
 			for( int i = 0; i < decks.Length; i++)
 			{
-				AddDeck(decks[i]);
+				this.decks.Add(decks[i]);
 			}
 		}
 
