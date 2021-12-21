@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Flashcard_App_Gallup.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,8 @@ namespace Flashcard_App_Gallup
 			if (!result)
 			{
 				Data.SetError("Deck was not removed successfully : " + deck.GetName() );
+				ErrorPrompt err = new ErrorPrompt();
+				err.Show();
 			}
 		}
 	}

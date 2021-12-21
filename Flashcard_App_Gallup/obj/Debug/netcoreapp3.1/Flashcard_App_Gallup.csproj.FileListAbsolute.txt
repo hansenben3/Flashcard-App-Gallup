@@ -52,3 +52,4 @@ C:\Users\benna\Desktop\Flashcard App - Gallup\Flashcard-App-Gallup\Flashcard_App
 C:\Users\benna\Desktop\Flashcard App - Gallup\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.dll
 C:\Users\benna\Desktop\Flashcard App - Gallup\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.pdb
 C:\Users\benna\Desktop\Flashcard App - Gallup\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.genruntimeconfig.cache
+C:\Users\benna\Desktop\Flashcard App - Gallup\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.Forms.ErrorPrompt.resources

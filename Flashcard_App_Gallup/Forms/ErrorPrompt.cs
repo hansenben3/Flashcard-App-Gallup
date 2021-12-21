@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Flashcard_App_Gallup.Prefabs
+namespace Flashcard_App_Gallup.Forms
 {
-	public partial class ErrorPrompt : UserControl
+	public partial class ErrorPrompt : Form
 	{
 		public ErrorPrompt()
 		{
