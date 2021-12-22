@@ -122,7 +122,7 @@ namespace Flashcard_App_Gallup.Forms
 			this.Controls.Add(this.btn_exit);
 			this.Controls.Add(this.lbl_name);
 			this.Name = "DeckView";
-			this.Text = "DeckView";
+			this.Text = "Flashcard App";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

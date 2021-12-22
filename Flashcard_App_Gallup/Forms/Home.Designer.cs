@@ -113,7 +113,7 @@ namespace Flashcard_App_Gallup
 			this.Controls.Add(this.lbl_title);
 			this.Controls.Add(this.btn_createDeck);
 			this.Name = "Home";
-			this.Text = "Form1";
+			this.Text = "Flashcard App";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

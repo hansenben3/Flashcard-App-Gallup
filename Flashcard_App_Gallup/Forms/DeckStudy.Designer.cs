@@ -37,7 +37,7 @@ namespace Flashcard_App_Gallup.Forms
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(884, 711);
 			this.Name = "DeckStudy";
-			this.Text = "DeckStudy";
+			this.Text = "Flashcard App";
 			this.ResumeLayout(false);
 
 		}

@@ -119,7 +119,7 @@ namespace Flashcard_App_Gallup.Forms
 			this.Controls.Add(this.richTextBox1);
 			this.Controls.Add(this.txt_name);
 			this.Name = "DeckEdit";
-			this.Text = "DeckEdit";
+			this.Text = "Flashcard App";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
