@@ -10,9 +10,11 @@ namespace Flashcard_App_Gallup.Forms
 {
 	public partial class DeckStudy : Form
 	{
-		public DeckStudy()
+		private Deck deck;
+		public DeckStudy(Deck d)
 		{
 			InitializeComponent();
+			deck = d;
 		}
 	}
 }

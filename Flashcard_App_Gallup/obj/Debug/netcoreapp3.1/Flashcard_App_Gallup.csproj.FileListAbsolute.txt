@@ -60,3 +60,4 @@ C:\Users\benna\Desktop\Flashcard App - Gallup\Flashcard-App-Gallup\Flashcard_App
 C:\Users\benna\Desktop\Flashcard App - Gallup\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.Prefabs.ViewDisplayPrefab.resources
 C:\Users\benna\Desktop\Flashcard App - Gallup\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.Prefabs.DeckEditPrefab.resources
 C:\Users\benna\Desktop\Flashcard App - Gallup\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.Prefabs.EditDisplayPrefab.resources
+C:\Users\benna\Desktop\Flashcard App - Gallup\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.Forms.AddCard.resources

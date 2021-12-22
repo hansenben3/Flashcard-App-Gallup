@@ -46,5 +46,19 @@ namespace Flashcard_App_Gallup
 			Form form = new DeckView(deck);
 			form.ShowDialog();
 		}
+
+		private void btn_edit_Click(object sender, EventArgs e)
+		{
+			Data.home.Hide();
+			Form form = new DeckEdit(deck);
+			form.ShowDialog();
+		}
+
+		private void btn_study_Click(object sender, EventArgs e)
+		{
+			Data.home.Hide();
+			Form form = new DeckStudy(deck);
+			form.ShowDialog();
+		}
 	}
 }

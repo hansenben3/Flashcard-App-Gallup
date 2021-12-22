@@ -13,6 +13,12 @@ namespace Flashcard_App_Gallup.Forms
 		public ErrorPrompt()
 		{
 			InitializeComponent();
+			SetError();
+		}
+
+		private void SetError()
+		{
+			lbl_error.Text = Data.GetError();
 		}
 	}
 }

@@ -14,12 +14,10 @@ namespace Flashcard_App_Gallup
 {
 	public partial class Home : Form
 	{
-		private List<DeckPrefab> displayedDecks;
 		private DeckDisplayPrefab display;
 		public Home()
 		{
 			InitializeComponent();
-			displayedDecks = new List<DeckPrefab>();
 			Data.home = this;
 			CustomRefresh();
 		}
@@ -33,6 +31,10 @@ namespace Flashcard_App_Gallup
 
 		public void CustomRefresh()
 		{
+			if(display != null)
+			{
+				this.display.Hide();
+			}
 			this.lbl_deckcount.Text = "Deck Count : " + Data.GetDecks().Length;
 			if (!this.Visible)
 			{

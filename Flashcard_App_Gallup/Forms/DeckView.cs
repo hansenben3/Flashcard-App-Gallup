@@ -19,6 +19,7 @@ namespace Flashcard_App_Gallup.Forms
 			InitializeComponent();
 			SetDeck(deck);
 			InitView();
+			
 		}
 
 		private void SetDeck(Deck deck)
@@ -29,8 +30,10 @@ namespace Flashcard_App_Gallup.Forms
 		private void InitView()
 		{
 			display = new ViewDisplayPrefab(deck) { Dock = DockStyle.Fill };
+			lbl_name.Text = deck.GetName();
 			this.pnl_container.Controls.Add(display);
 			this.display.Show();
+			lbl_cardcount.Text = "Card Count: " + deck.GetCount().ToString();
 		}
 
 		private void btn_exit_Click(object sender, EventArgs e)
@@ -49,9 +52,24 @@ namespace Flashcard_App_Gallup.Forms
 
 		private void btn_edit_Click(object sender, EventArgs e)
 		{
-			this.Hide();
+			this.Close();
 			Form form = new DeckEdit(deck);
 			form.ShowDialog();
+		}
+
+		private void btn_delete_Click(object sender, EventArgs e)
+		{
+			bool result = Data.RemoveDeck(deck);
+			if (!result)
+			{
+				Data.SetError("Deck was not removed successfully : " + deck.GetName());
+				ErrorPrompt err = new ErrorPrompt();
+				err.Show();
+			}
+			else
+			{
+				Data.home.CustomRefresh();
+			}
 		}
 	}
 }

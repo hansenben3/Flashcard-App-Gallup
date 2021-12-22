@@ -60,6 +60,21 @@ namespace Flashcard_App_Gallup
 			return cards.Contains(card);
 		}
 
+		public void UpdateCard(Flashcard c, Flashcard newCard)
+		{
+			Deck before = this;
+
+			cards.ForEach((card) =>
+			{
+				if(card == c)
+				{
+					card = newCard;
+				}
+			});
+
+			Data.UpdateDeck(before, this);
+		}
+
 
 	}
 }

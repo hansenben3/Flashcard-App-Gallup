@@ -49,7 +49,7 @@ namespace Flashcard_App_Gallup
 			// 
 			// btn_view
 			// 
-			this.btn_view.Location = new System.Drawing.Point(186, 12);
+			this.btn_view.Location = new System.Drawing.Point(498, 12);
 			this.btn_view.Name = "btn_view";
 			this.btn_view.Size = new System.Drawing.Size(116, 48);
 			this.btn_view.TabIndex = 2;
@@ -59,25 +59,27 @@ namespace Flashcard_App_Gallup
 			// 
 			// btn_edit
 			// 
-			this.btn_edit.Location = new System.Drawing.Point(343, 12);
+			this.btn_edit.Location = new System.Drawing.Point(652, 12);
 			this.btn_edit.Name = "btn_edit";
 			this.btn_edit.Size = new System.Drawing.Size(116, 48);
 			this.btn_edit.TabIndex = 3;
 			this.btn_edit.Text = "Edit";
 			this.btn_edit.UseVisualStyleBackColor = true;
+			this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
 			// 
 			// btn_study
 			// 
-			this.btn_study.Location = new System.Drawing.Point(498, 12);
+			this.btn_study.Location = new System.Drawing.Point(652, 72);
 			this.btn_study.Name = "btn_study";
 			this.btn_study.Size = new System.Drawing.Size(116, 48);
 			this.btn_study.TabIndex = 4;
 			this.btn_study.Text = "Study";
 			this.btn_study.UseVisualStyleBackColor = true;
+			this.btn_study.Click += new System.EventHandler(this.btn_study_Click);
 			// 
 			// btn_delete
 			// 
-			this.btn_delete.Location = new System.Drawing.Point(653, 12);
+			this.btn_delete.Location = new System.Drawing.Point(652, 132);
 			this.btn_delete.Name = "btn_delete";
 			this.btn_delete.Size = new System.Drawing.Size(116, 48);
 			this.btn_delete.TabIndex = 5;
@@ -90,7 +92,7 @@ namespace Flashcard_App_Gallup
 			this.lbl_description.Enabled = false;
 			this.lbl_description.Location = new System.Drawing.Point(25, 65);
 			this.lbl_description.Name = "lbl_description";
-			this.lbl_description.Size = new System.Drawing.Size(750, 115);
+			this.lbl_description.Size = new System.Drawing.Size(589, 115);
 			this.lbl_description.TabIndex = 6;
 			this.lbl_description.Text = "";
 			// 

@@ -82,6 +82,7 @@ namespace Flashcard_App_Gallup
 					deck = newDeck;
 				}
 			});
+			SaveData();
 		}
 
 		public static int GetNextID()

@@ -35,13 +35,14 @@ namespace Flashcard_App_Gallup.Forms
 			this.btn_edit = new System.Windows.Forms.Button();
 			this.btn_delete = new System.Windows.Forms.Button();
 			this.pnl_container = new System.Windows.Forms.Panel();
+			this.lbl_cardcount = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// lbl_name
 			// 
 			this.lbl_name.AutoSize = true;
 			this.lbl_name.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.lbl_name.Location = new System.Drawing.Point(388, 9);
+			this.lbl_name.Location = new System.Drawing.Point(394, 9);
 			this.lbl_name.Name = "lbl_name";
 			this.lbl_name.Size = new System.Drawing.Size(88, 37);
 			this.lbl_name.TabIndex = 0;
@@ -88,6 +89,7 @@ namespace Flashcard_App_Gallup.Forms
 			this.btn_delete.TabIndex = 4;
 			this.btn_delete.Text = "Delete";
 			this.btn_delete.UseVisualStyleBackColor = true;
+			this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
 			// 
 			// pnl_container
 			// 
@@ -97,11 +99,22 @@ namespace Flashcard_App_Gallup.Forms
 			this.pnl_container.Size = new System.Drawing.Size(860, 525);
 			this.pnl_container.TabIndex = 5;
 			// 
+			// lbl_cardcount
+			// 
+			this.lbl_cardcount.AutoSize = true;
+			this.lbl_cardcount.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.lbl_cardcount.Location = new System.Drawing.Point(635, 16);
+			this.lbl_cardcount.Name = "lbl_cardcount";
+			this.lbl_cardcount.Size = new System.Drawing.Size(115, 28);
+			this.lbl_cardcount.TabIndex = 6;
+			this.lbl_cardcount.Text = "Card Count:";
+			// 
 			// DeckView
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(884, 711);
+			this.Controls.Add(this.lbl_cardcount);
 			this.Controls.Add(this.pnl_container);
 			this.Controls.Add(this.btn_delete);
 			this.Controls.Add(this.btn_edit);
@@ -123,5 +136,6 @@ namespace Flashcard_App_Gallup.Forms
 		private System.Windows.Forms.Button btn_edit;
 		private System.Windows.Forms.Button btn_delete;
 		private System.Windows.Forms.Panel pnl_container;
+		private System.Windows.Forms.Label lbl_cardcount;
 	}
 }
