@@ -40,5 +40,15 @@ namespace Flashcard_App_Gallup.Prefabs
 				displayedPrefabs[i].Show();
 			}
 		}
+
+		public Deck GetDeck(string n, string d)
+		{
+			Deck newDeck = new Deck(n, d);
+			for( int i = 0; i < displayedPrefabs.Count; i++)
+			{
+				newDeck.AddFlashcard(displayedPrefabs[i].GetCard());
+			}
+			return newDeck;
+		}
 	}
 }

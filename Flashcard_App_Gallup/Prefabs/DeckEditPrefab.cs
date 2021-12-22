@@ -29,27 +29,12 @@ namespace Flashcard_App_Gallup.Prefabs
 
 		private void btn_delete_Click(object sender, EventArgs e)
 		{
-			Deck before = deck;
-			bool result = deck.DeleteCard(card);
-			if (result)
-			{
-				Data.UpdateDeck(before, deck);
 
-			}
-			else
-			{
-				Data.SetError("Card was not deleted succesfully");
-				ErrorPrompt err = new ErrorPrompt();
-				err.Show();
-			}
-			
 		}
 
-		private void btn_save_Click(object sender, EventArgs e)
+		public Flashcard GetCard()
 		{
-			Flashcard newCard = new Flashcard(txt_front.Text, txt_back.Text);
-			deck.UpdateCard(card, newCard);
-			this.Refresh();
+			return new Flashcard(txt_front.Text, txt_back.Text);
 		}
 	}
 }

@@ -31,7 +31,6 @@ namespace Flashcard_App_Gallup.Prefabs
 		{
 			this.txt_front = new System.Windows.Forms.RichTextBox();
 			this.txt_back = new System.Windows.Forms.RichTextBox();
-			this.btn_save = new System.Windows.Forms.Button();
 			this.btn_delete = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
@@ -51,21 +50,10 @@ namespace Flashcard_App_Gallup.Prefabs
 			this.txt_back.TabIndex = 1;
 			this.txt_back.Text = "";
 			// 
-			// btn_save
-			// 
-			this.btn_save.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.btn_save.Location = new System.Drawing.Point(650, 15);
-			this.btn_save.Name = "btn_save";
-			this.btn_save.Size = new System.Drawing.Size(100, 35);
-			this.btn_save.TabIndex = 2;
-			this.btn_save.Text = "Save";
-			this.btn_save.UseVisualStyleBackColor = true;
-			this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-			// 
 			// btn_delete
 			// 
 			this.btn_delete.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.btn_delete.Location = new System.Drawing.Point(650, 60);
+			this.btn_delete.Location = new System.Drawing.Point(656, 37);
 			this.btn_delete.Name = "btn_delete";
 			this.btn_delete.Size = new System.Drawing.Size(100, 35);
 			this.btn_delete.TabIndex = 3;
@@ -78,7 +66,6 @@ namespace Flashcard_App_Gallup.Prefabs
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.btn_delete);
-			this.Controls.Add(this.btn_save);
 			this.Controls.Add(this.txt_back);
 			this.Controls.Add(this.txt_front);
 			this.Name = "DeckEditPrefab";
@@ -91,7 +78,6 @@ namespace Flashcard_App_Gallup.Prefabs
 
 		private System.Windows.Forms.RichTextBox txt_front;
 		private System.Windows.Forms.RichTextBox txt_back;
-		private System.Windows.Forms.Button btn_save;
 		private System.Windows.Forms.Button btn_delete;
 	}
 }

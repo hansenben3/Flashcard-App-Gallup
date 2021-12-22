@@ -42,10 +42,21 @@ namespace Flashcard_App_Gallup.Forms
 
 		private void InitView()
 		{
+			txt_name.Text = deck.GetName();
+			txt_description.Text = deck.GetDescription();
 			display = new EditDisplayPrefab(deck) { Dock = DockStyle.Fill };
 			lbl_name.Text = deck.GetName();
 			this.panel1.Controls.Add(display);
 			this.display.Show();
+		}
+
+		private void btn_save_Click(object sender, EventArgs e)
+		{
+
+			Deck newDeck = display.GetDeck(txt_name.Text, txt_description.Text);
+			Data.UpdateDeck(deck, newDeck);
+			this.Close();
+			Data.home.CustomRefresh();
 		}
 	}
 }
