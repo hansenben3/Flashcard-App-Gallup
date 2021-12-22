@@ -27,14 +27,14 @@ namespace Flashcard_App_Gallup.Prefabs
 
 		private void DisplayPrefabs()
 		{
-			pnl_container.Height = decks.Count * 190; // 200 is the height of the DeckPrefab
+			pnl_container.Height = decks.Count * 190; // 190 is the height of the DeckPrefab
 			int height = 0;
 			DeckPrefab[] notDisplayedPrefabs = new DeckPrefab[decks.Count];
-			for ( int i = 0; i < decks.Count; i++)
+			for ( int i = 0; i < notDisplayedPrefabs.Length; i++)
 			{
 				if(i > 0)
 				{
-					height += 190;
+					height += 190; // 190 is the height of the DeckPrefab
 				}
 
 				notDisplayedPrefabs[i] = new DeckPrefab(decks[i]);

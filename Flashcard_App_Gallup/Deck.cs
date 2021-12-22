@@ -6,13 +6,14 @@ namespace Flashcard_App_Gallup
 {
 	public class Deck
 	{
-
+		private int deckId;
 		private string deckName;
 		private string deckDescription;
 		private List<Flashcard> cards;
 
 		public Deck(string name, string description)
 		{
+			deckId = Data.GetNextID();
 			deckName = name;
 			deckDescription = description;
 			cards = new List<Flashcard>();
@@ -51,6 +52,12 @@ namespace Flashcard_App_Gallup
 		public int GetCount()
 		{
 			return cards.Count;
+		}
+
+		public bool DeleteCard(Flashcard card)
+		{
+			cards.Remove(card);
+			return cards.Contains(card);
 		}
 
 

@@ -6,7 +6,8 @@ namespace Flashcard_App_Gallup
 {
 	public static class Data
 	{
-
+		private static int idCount = 0;
+		public static Home home;
 		private static List<Deck> decks;
 		private static string error;
 
@@ -18,6 +19,7 @@ namespace Flashcard_App_Gallup
 		public static void AddDeck(Deck deck)
 		{
 			decks.Add(deck);
+			SaveData();
 		}
 
 		public static bool RemoveDeck(Deck deck)
@@ -25,6 +27,7 @@ namespace Flashcard_App_Gallup
 			if (decks.Contains(deck))
 			{
 				decks.Remove(deck);
+				SaveData();
 				return true;
 			}
 			else
@@ -68,6 +71,22 @@ namespace Flashcard_App_Gallup
 					decks.Add(CustomSerializer.Deserialize(arr[i]));
 				}
 			}
+		}
+
+		public static void UpdateDeck(Deck d, Deck newDeck)
+		{
+			decks.ForEach((deck) => 
+			{
+				if(deck == d)
+				{
+					deck = newDeck;
+				}
+			});
+		}
+
+		public static int GetNextID()
+		{
+			return idCount++;
 		}
 
 	}

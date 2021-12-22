@@ -10,24 +10,22 @@ namespace Flashcard_App_Gallup.Forms
 {
 	public partial class CreateDeck : Form
 	{
-		private Home home;
-		public CreateDeck(Home home)
+		public CreateDeck()
 		{
-			this.home = home;
 			InitializeComponent();
 		}
 
 		private void btn_cancel_Click(object sender, EventArgs e)
 		{
 			this.Close();
-			if(home == null)
+			if(Data.home == null)
 			{
-				home = new Home();
-				home.CustomRefresh();
+				Data.home = new Home();
+				Data.home.CustomRefresh();
 			}
 			else
 			{
-				home.CustomRefresh();
+				Data.home.CustomRefresh();
 			}
 			
 		}
@@ -37,14 +35,14 @@ namespace Flashcard_App_Gallup.Forms
 			Data.AddDeck(new Deck(txt_name.Text, txt_description.Text));
 			Data.SaveData();
 			this.Close();
-			if (home == null)
+			if (Data.home == null)
 			{
-				home = new Home();
-				home.CustomRefresh();
+				Data.home = new Home();
+				Data.home.CustomRefresh();
 			}
 			else
 			{
-				home.CustomRefresh();
+				Data.home.CustomRefresh();
 			}
 		}
 	}

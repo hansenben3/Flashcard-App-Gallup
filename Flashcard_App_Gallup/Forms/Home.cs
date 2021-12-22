@@ -20,13 +20,14 @@ namespace Flashcard_App_Gallup
 		{
 			InitializeComponent();
 			displayedDecks = new List<DeckPrefab>();
+			Data.home = this;
 			CustomRefresh();
 		}
 
 		private void btn_createDeck_Click(object sender, EventArgs e)
 		{
 			this.Hide();
-			Form form = new CreateDeck(this);
+			Form form = new CreateDeck();
 			form.ShowDialog();
 		}
 

@@ -55,6 +55,7 @@ namespace Flashcard_App_Gallup
 			this.btn_view.TabIndex = 2;
 			this.btn_view.Text = "View";
 			this.btn_view.UseVisualStyleBackColor = true;
+			this.btn_view.Click += new System.EventHandler(this.btn_view_Click);
 			// 
 			// btn_edit
 			// 
@@ -106,7 +107,7 @@ namespace Flashcard_App_Gallup
 			this.Controls.Add(this.btn_view);
 			this.Controls.Add(this.lbl_name);
 			this.Name = "DeckPrefab";
-			this.Size = new System.Drawing.Size(798, 198);
+			this.Size = new System.Drawing.Size(800, 200);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

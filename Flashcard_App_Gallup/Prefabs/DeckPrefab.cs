@@ -34,6 +34,17 @@ namespace Flashcard_App_Gallup
 				ErrorPrompt err = new ErrorPrompt();
 				err.Show();
 			}
+			else
+			{
+				Data.home.CustomRefresh();
+			}
+		}
+
+		private void btn_view_Click(object sender, EventArgs e)
+		{
+			Data.home.Hide();
+			Form form = new DeckView(deck);
+			form.ShowDialog();
 		}
 	}
 }

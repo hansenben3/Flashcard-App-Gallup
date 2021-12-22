@@ -34,6 +34,7 @@ namespace Flashcard_App_Gallup.Forms
 			this.btn_study = new System.Windows.Forms.Button();
 			this.btn_edit = new System.Windows.Forms.Button();
 			this.btn_delete = new System.Windows.Forms.Button();
+			this.pnl_container = new System.Windows.Forms.Panel();
 			this.SuspendLayout();
 			// 
 			// lbl_name
@@ -55,6 +56,7 @@ namespace Flashcard_App_Gallup.Forms
 			this.btn_exit.TabIndex = 1;
 			this.btn_exit.Text = "Exit";
 			this.btn_exit.UseVisualStyleBackColor = true;
+			this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
 			// 
 			// btn_study
 			// 
@@ -75,6 +77,7 @@ namespace Flashcard_App_Gallup.Forms
 			this.btn_edit.TabIndex = 3;
 			this.btn_edit.Text = "Edit";
 			this.btn_edit.UseVisualStyleBackColor = true;
+			this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
 			// 
 			// btn_delete
 			// 
@@ -86,11 +89,20 @@ namespace Flashcard_App_Gallup.Forms
 			this.btn_delete.Text = "Delete";
 			this.btn_delete.UseVisualStyleBackColor = true;
 			// 
+			// pnl_container
+			// 
+			this.pnl_container.AutoScroll = true;
+			this.pnl_container.Location = new System.Drawing.Point(12, 130);
+			this.pnl_container.Name = "pnl_container";
+			this.pnl_container.Size = new System.Drawing.Size(860, 525);
+			this.pnl_container.TabIndex = 5;
+			// 
 			// DeckView
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(884, 711);
+			this.Controls.Add(this.pnl_container);
 			this.Controls.Add(this.btn_delete);
 			this.Controls.Add(this.btn_edit);
 			this.Controls.Add(this.btn_study);
@@ -110,5 +122,6 @@ namespace Flashcard_App_Gallup.Forms
 		private System.Windows.Forms.Button btn_study;
 		private System.Windows.Forms.Button btn_edit;
 		private System.Windows.Forms.Button btn_delete;
+		private System.Windows.Forms.Panel pnl_container;
 	}
 }

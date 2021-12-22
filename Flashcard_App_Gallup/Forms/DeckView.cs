@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Flashcard_App_Gallup.Prefabs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,7 @@ namespace Flashcard_App_Gallup.Forms
 	public partial class DeckView : Form
 	{
 		private Deck deck;
+		private ViewDisplayPrefab display;
 
 		public DeckView(Deck deck)
 		{
@@ -26,7 +28,30 @@ namespace Flashcard_App_Gallup.Forms
 
 		private void InitView()
 		{
+			display = new ViewDisplayPrefab(deck) { Dock = DockStyle.Fill };
+			this.pnl_container.Controls.Add(display);
+			this.display.Show();
+		}
 
+		private void btn_exit_Click(object sender, EventArgs e)
+		{
+			this.Close();
+			if (Data.home == null)
+			{
+				Data.home = new Home();
+				Data.home.CustomRefresh();
+			}
+			else
+			{
+				Data.home.CustomRefresh();
+			}
+		}
+
+		private void btn_edit_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			Form form = new DeckEdit(deck);
+			form.ShowDialog();
 		}
 	}
 }
