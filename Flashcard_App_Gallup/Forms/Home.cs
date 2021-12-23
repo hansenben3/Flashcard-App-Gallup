@@ -50,5 +50,11 @@ namespace Flashcard_App_Gallup
 		{
 			Application.Exit();
 		}
+
+		public void CreateError()
+		{
+			Form form = new ErrorPrompt();
+			form.ShowDialog();
+		}
 	}
 }

@@ -32,7 +32,7 @@ namespace Flashcard_App_Gallup.Forms
 
 		private void btn_submit_Click(object sender, EventArgs e)
 		{
-			Data.AddDeck(new Deck(txt_name.Text, txt_description.Text));
+			Data.AddDeck(new Deck(txt_name.Text, txt_description.Text, Data.GetNextID()));
 			Data.SaveData();
 			this.Close();
 			if (Data.home == null)

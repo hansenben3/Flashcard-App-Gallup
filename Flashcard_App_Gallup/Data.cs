@@ -13,7 +13,15 @@ namespace Flashcard_App_Gallup
 
 		public static Deck[] GetDecks()
 		{
-			return decks.ToArray();
+			if(decks != null)
+			{
+				return decks.ToArray();
+			}
+			else
+			{
+				return new Deck[0];
+			}
+			
 		}
 
 		public static void AddDeck(Deck deck)
@@ -77,12 +85,25 @@ namespace Flashcard_App_Gallup
 		{
 			decks.ForEach((deck) => 
 			{
-				if(deck == d)
+				if(deck.GetID() == d.GetID())
 				{
 					deck = newDeck;
 				}
 			});
 			SaveData();
+			bool updated = false;
+			decks.ForEach((deck) =>
+			{
+				if(deck.GetID() == newDeck.GetID())
+				{
+					updated = true;
+				}
+			});
+			if(updated == false)
+			{
+				SetError("Deck was not successfully updated");
+				home.CreateError();
+			}
 		}
 
 		public static int GetNextID()

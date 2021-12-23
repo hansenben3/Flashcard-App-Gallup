@@ -43,7 +43,7 @@ namespace Flashcard_App_Gallup.Prefabs
 
 		public Deck GetDeck(string n, string d)
 		{
-			Deck newDeck = new Deck(n, d);
+			Deck newDeck = new Deck( n, d, deck.GetID() );
 			for( int i = 0; i < displayedPrefabs.Count; i++)
 			{
 				newDeck.AddFlashcard(displayedPrefabs[i].GetCard());

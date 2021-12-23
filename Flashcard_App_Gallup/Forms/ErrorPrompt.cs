@@ -20,5 +20,11 @@ namespace Flashcard_App_Gallup.Forms
 		{
 			lbl_error.Text = Data.GetError();
 		}
+
+		private void btn_confirm_Click(object sender, EventArgs e)
+		{
+			this.Close();
+			Data.SetError(null);
+		}
 	}
 }

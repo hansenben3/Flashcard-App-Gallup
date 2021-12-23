@@ -11,9 +11,9 @@ namespace Flashcard_App_Gallup
 		private string deckDescription;
 		private List<Flashcard> cards;
 
-		public Deck(string name, string description)
+		public Deck(string name, string description, int id)
 		{
-			deckId = Data.GetNextID();
+			deckId = id;
 			deckName = name;
 			deckDescription = description;
 			cards = new List<Flashcard>();
@@ -66,13 +66,22 @@ namespace Flashcard_App_Gallup
 
 			cards.ForEach((card) =>
 			{
-				if(card == c)
+				if(card.GetFront() == c.GetFront())
 				{
-					card = newCard;
+					if(card.GetBack() == c.GetBack())
+					{
+						card = newCard;
+					}
+					
 				}
 			});
 
 			Data.UpdateDeck(before, this);
+		}
+
+		public int GetID()
+		{
+			return deckId;
 		}
 
 
