@@ -37,6 +37,9 @@
     <Compile Update="Prefabs\DeckEditPrefab.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Prefabs\StudyDeckPrefab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Prefabs\ViewDisplayPrefab.cs">
       <SubType>UserControl</SubType>
     </Compile>
