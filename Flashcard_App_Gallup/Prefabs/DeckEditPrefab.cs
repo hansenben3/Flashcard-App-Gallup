@@ -29,7 +29,9 @@ namespace Flashcard_App_Gallup.Prefabs
 
 		private void btn_delete_Click(object sender, EventArgs e)
 		{
-
+			deck.DeleteCard(card);
+			Data.UpdateDeck(deck);
+			Parent.Parent.Refresh();
 		}
 
 		public Flashcard GetCard()

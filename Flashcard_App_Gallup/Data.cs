@@ -26,8 +26,18 @@ namespace Flashcard_App_Gallup
 
 		public static void AddDeck(Deck deck)
 		{
-			decks.Add(deck);
-			SaveData();
+			if(decks != null)
+			{
+				decks.Add(deck);
+				SaveData();
+			}
+			else
+			{
+				decks = new List<Deck>();
+				decks.Add(deck);
+				SaveData();
+			}
+
 		}
 
 		public static bool RemoveDeck(Deck deck)
@@ -61,7 +71,7 @@ namespace Flashcard_App_Gallup
 				string toBeSaved = CustomSerializer.Serialize(decks[0]);
 				for ( int i = 1; i < decks.Count; i++)
 				{
-					toBeSaved += "?" + CustomSerializer.Serialize(decks[i]);
+					toBeSaved += "<mainSplit>" + CustomSerializer.Serialize(decks[i]);
 				}
 				SaveManager.SaveData(toBeSaved);
 			}
@@ -73,7 +83,7 @@ namespace Flashcard_App_Gallup
 			decks = new List<Deck>();
 			if(returnedString != null)
 			{
-				string[] arr = returnedString.Split("?");
+				string[] arr = returnedString.Split("<mainSplit>");
 				for (int i = 0; i < arr.Length; i++)
 				{
 					decks.Add(CustomSerializer.Deserialize(arr[i]));
@@ -81,30 +91,22 @@ namespace Flashcard_App_Gallup
 			}
 		}
 
-		public static void UpdateDeck(Deck d, Deck newDeck)
+		public static void UpdateDeck( Deck newDeck)
 		{
+			Deck toRemove = null;
 			decks.ForEach((deck) => 
-			{
-				if(deck.GetID() == d.GetID())
-				{
-					deck = newDeck;
-				}
-			});
-			SaveData();
-			bool updated = false;
-			decks.ForEach((deck) =>
 			{
 				if(deck.GetID() == newDeck.GetID())
 				{
-					updated = true;
+					toRemove = deck;
 				}
 			});
-			if(updated == false)
+			if(toRemove != null)
 			{
-				SetError("Deck was not successfully updated");
-				home.CreateError();
-			}
-		}
+				decks.Remove(toRemove);
+				decks.Add(newDeck);
+				SaveData();
+			}		}
 
 		public static int GetNextID()
 		{

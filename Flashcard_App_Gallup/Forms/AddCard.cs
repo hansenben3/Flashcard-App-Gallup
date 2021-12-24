@@ -26,11 +26,11 @@ namespace Flashcard_App_Gallup.Forms
 
 		private void btn_submit_Click(object sender, EventArgs e)
 		{
-			Deck before = deck;
 			deck.AddFlashcard(new Flashcard(txt_front.Text, txt_back.Text));
-			Data.UpdateDeck(before, deck);
+			Data.UpdateDeck(deck);
 			this.Close();
-			form.Refresh();
+			form.Close();
+			Data.home.CustomRefresh();
 		}
 	}
 }

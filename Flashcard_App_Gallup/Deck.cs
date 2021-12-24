@@ -62,7 +62,6 @@ namespace Flashcard_App_Gallup
 
 		public void UpdateCard(Flashcard c, Flashcard newCard)
 		{
-			Deck before = this;
 
 			cards.ForEach((card) =>
 			{
@@ -76,7 +75,7 @@ namespace Flashcard_App_Gallup
 				}
 			});
 
-			Data.UpdateDeck(before, this);
+			Data.UpdateDeck(this);
 		}
 
 		public int GetID()

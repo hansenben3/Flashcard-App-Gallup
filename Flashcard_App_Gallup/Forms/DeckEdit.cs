@@ -54,9 +54,10 @@ namespace Flashcard_App_Gallup.Forms
 		{
 
 			Deck newDeck = display.GetDeck(txt_name.Text, txt_description.Text);
-			Data.UpdateDeck(deck, newDeck);
+			Data.UpdateDeck(newDeck);
 			this.Close();
 			Data.home.CustomRefresh();
 		}
+
 	}
 }

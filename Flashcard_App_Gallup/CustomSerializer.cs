@@ -22,28 +22,28 @@ namespace Flashcard_App_Gallup
 		{
 			Flashcard[] cards = deck.GetCards();
 			string[] arr = new string[deck.GetCards().Length];
-			string serializedString1 = deck.GetName() + ":" + deck.GetDescription() + ":" + 
-				deck.GetID().ToString() + ":" + cards.Length.ToString();
+			string serializedString1 = deck.GetName() + "<s>" + deck.GetDescription() + "<s>" + 
+				deck.GetID().ToString() + "<s>" + cards.Length.ToString();
 			if (deck.GetCards().Length != 0)
 			{
-				string serializedString2 = cards[0].GetFront() + ":" + cards[0].GetBack();
+				string serializedString2 = cards[0].GetFront() + "<s>" + cards[0].GetBack();
 				for (int i = 1; i < cards.Length; i++)
 				{
-					serializedString2 += ":" + cards[i].GetFront() + ":" + cards[i].GetBack();
+					serializedString2 += "<s>" + cards[i].GetFront() + "<s>" + cards[i].GetBack();
 				}
-				return serializedString1 + ";" + serializedString2;
+				return serializedString1 + "<split>" + serializedString2;
 			}
 			else
 			{
-				return serializedString1 + ";";
+				return serializedString1 + "<split>";
 			}
 		}
 
 		public static Deck Deserialize(string data)
 		{
-			string[] parts = data.Split(";");
-			string[] part1 = parts[0].Split(":");
-			string[] part2 = parts[1].Split(":");
+			string[] parts = data.Split("<split>");
+			string[] part1 = parts[0].Split("<s>");
+			string[] part2 = parts[1].Split("<s>");
 
 			Deck deck = new Deck(part1[0], part1[1], int.Parse(part1[2]));
 			for( int i = 0; i < int.Parse(part1[3]); i+=2)
