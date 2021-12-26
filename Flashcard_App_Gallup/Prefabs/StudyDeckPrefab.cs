@@ -11,16 +11,25 @@ namespace Flashcard_App_Gallup.Prefabs
 	public partial class StudyDeckPrefab : UserControl
 	{
 		private Flashcard card;
-		public StudyDeckPrefab(Flashcard c)
+		private bool flipped;
+		public StudyDeckPrefab(Flashcard c, bool f)
 		{
 			InitializeComponent();
 			card = c;
+			flipped = f;
 			InitView();
 		}
 
 		private void InitView()
 		{
-
+			if (flipped)
+			{
+				txt_cardtxt.Text = card.GetBack();
+			}
+			else
+			{
+				txt_cardtxt.Text = card.GetFront();
+			}
 		}
 	}
 }

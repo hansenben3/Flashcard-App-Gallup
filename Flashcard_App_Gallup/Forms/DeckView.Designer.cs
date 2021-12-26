@@ -68,6 +68,7 @@ namespace Flashcard_App_Gallup.Forms
 			this.btn_study.TabIndex = 2;
 			this.btn_study.Text = "Study";
 			this.btn_study.UseVisualStyleBackColor = true;
+			this.btn_study.Click += new System.EventHandler(this.btn_study_Click);
 			// 
 			// btn_edit
 			// 

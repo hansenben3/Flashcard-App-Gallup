@@ -29,28 +29,8 @@ namespace Flashcard_App_Gallup.Prefabs
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.btn_flip = new System.Windows.Forms.Button();
-			this.btn_next = new System.Windows.Forms.Button();
 			this.txt_cardtxt = new System.Windows.Forms.RichTextBox();
 			this.SuspendLayout();
-			// 
-			// btn_flip
-			// 
-			this.btn_flip.Location = new System.Drawing.Point(70, 182);
-			this.btn_flip.Name = "btn_flip";
-			this.btn_flip.Size = new System.Drawing.Size(111, 42);
-			this.btn_flip.TabIndex = 1;
-			this.btn_flip.Text = "Flip";
-			this.btn_flip.UseVisualStyleBackColor = true;
-			// 
-			// btn_next
-			// 
-			this.btn_next.Location = new System.Drawing.Point(396, 182);
-			this.btn_next.Name = "btn_next";
-			this.btn_next.Size = new System.Drawing.Size(110, 42);
-			this.btn_next.TabIndex = 2;
-			this.btn_next.Text = "Next";
-			this.btn_next.UseVisualStyleBackColor = true;
 			// 
 			// txt_cardtxt
 			// 
@@ -68,18 +48,13 @@ namespace Flashcard_App_Gallup.Prefabs
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.txt_cardtxt);
-			this.Controls.Add(this.btn_next);
-			this.Controls.Add(this.btn_flip);
 			this.Name = "StudyDeckPrefab";
-			this.Size = new System.Drawing.Size(600, 250);
+			this.Size = new System.Drawing.Size(600, 180);
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Button btn_flip;
-		private System.Windows.Forms.Button btn_next;
 		private System.Windows.Forms.RichTextBox txt_cardtxt;
 	}
 }

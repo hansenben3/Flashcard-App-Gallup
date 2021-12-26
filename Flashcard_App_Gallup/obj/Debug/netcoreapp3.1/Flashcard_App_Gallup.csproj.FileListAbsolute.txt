@@ -70,3 +70,4 @@ C:\Users\benna\Desktop\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netco
 C:\Users\benna\Desktop\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.Prefabs.DeckViewPrefab.resources
 C:\Users\benna\Desktop\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.Prefabs.EditDisplayPrefab.resources
 C:\Users\benna\Desktop\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.Prefabs.ViewDisplayPrefab.resources
+C:\Users\benna\Desktop\Flashcard App - Gallup\Flashcard-App-Gallup\Flashcard_App_Gallup\obj\Debug\netcoreapp3.1\Flashcard_App_Gallup.Prefabs.StudyDeckPrefab.resources

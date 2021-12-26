@@ -71,5 +71,12 @@ namespace Flashcard_App_Gallup.Forms
 				Data.home.CustomRefresh();
 			}
 		}
+
+		private void btn_study_Click(object sender, EventArgs e)
+		{
+			this.Close();
+			Form form = new DeckStudy(deck);
+			form.ShowDialog();
+		}
 	}
 }
