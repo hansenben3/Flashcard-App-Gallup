@@ -15,6 +15,13 @@ namespace Flashcard_App_Gallup.Forms
 		{
 			InitializeComponent();
 			deck = d;
+			InitView();
 		}
+
+		private void InitView()
+		{
+
+		}
+
 	}
 }

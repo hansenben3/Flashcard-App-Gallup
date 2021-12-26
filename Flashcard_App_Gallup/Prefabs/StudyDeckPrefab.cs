@@ -10,9 +10,17 @@ namespace Flashcard_App_Gallup.Prefabs
 {
 	public partial class StudyDeckPrefab : UserControl
 	{
-		public StudyDeckPrefab()
+		private Flashcard card;
+		public StudyDeckPrefab(Flashcard c)
 		{
 			InitializeComponent();
+			card = c;
+			InitView();
+		}
+
+		private void InitView()
+		{
+
 		}
 	}
 }
