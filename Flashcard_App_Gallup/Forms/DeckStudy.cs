@@ -27,8 +27,16 @@ namespace Flashcard_App_Gallup.Forms
 
 		private void InitView()
 		{
-			lbl_cardct.Text = deck.GetCount().ToString();
-			SetCard(deck.GetCards()[currentCard]);
+			if(deck.GetCount() != 0)
+			{
+				lbl_cardct.Text = deck.GetCount().ToString();
+				SetCard(deck.GetCards()[currentCard]);
+			}
+			else
+			{
+				Data.SetError("There are no cards to study...");
+				Data.home.CreateError();
+			}
 		}
 
 

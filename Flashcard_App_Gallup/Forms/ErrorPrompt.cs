@@ -25,6 +25,7 @@ namespace Flashcard_App_Gallup.Forms
 		{
 			this.Close();
 			Data.SetError(null);
+			Data.home.CustomRefresh();
 		}
 	}
 }

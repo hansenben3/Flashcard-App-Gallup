@@ -58,9 +58,18 @@ namespace Flashcard_App_Gallup
 
 		private void btn_study_Click(object sender, EventArgs e)
 		{
-			Data.home.Hide();
-			Form form = new DeckStudy(deck);
-			form.ShowDialog();
+			if(deck.GetCount() != 0)
+			{
+				Data.home.Hide();
+				Form form = new DeckStudy(deck);
+				form.ShowDialog();
+			}
+			else
+			{
+				Data.SetError("There are no cards to study...");
+				Data.home.CreateError();
+			}
+
 		}
 
 		private void btn_addcard_Click(object sender, EventArgs e)
