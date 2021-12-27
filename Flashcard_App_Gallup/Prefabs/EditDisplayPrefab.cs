@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Flashcard_App_Gallup.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,13 @@ namespace Flashcard_App_Gallup.Prefabs
 	{
 		private Deck deck;
 		private List<DeckEditPrefab> displayedPrefabs;
-		public EditDisplayPrefab(Deck d)
+		private DeckEdit deckEdit;
+		public EditDisplayPrefab(Deck d, DeckEdit de)
 		{
 			InitializeComponent();
 			displayedPrefabs = new List<DeckEditPrefab>();
 			deck = d;
+			deckEdit = de;
 			DisplayPrefabs();
 		}
 
@@ -33,7 +36,7 @@ namespace Flashcard_App_Gallup.Prefabs
 					height += 190; // 190 is the height of the DeckEditPrefab
 				}
 
-				notDisplayedPrefabs[i] = new DeckEditPrefab( deck, cards[i] );
+				notDisplayedPrefabs[i] = new DeckEditPrefab( deck, cards[i], deckEdit );
 				displayedPrefabs.Add(notDisplayedPrefabs[i]);
 				displayedPrefabs[i].Top = height;
 				this.panel1.Controls.Add(displayedPrefabs[i]);

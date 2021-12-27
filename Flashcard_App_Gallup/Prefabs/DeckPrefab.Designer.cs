@@ -35,6 +35,7 @@ namespace Flashcard_App_Gallup
 			this.btn_study = new System.Windows.Forms.Button();
 			this.btn_delete = new System.Windows.Forms.Button();
 			this.lbl_description = new System.Windows.Forms.RichTextBox();
+			this.btn_addcard = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// lbl_name
@@ -96,12 +97,24 @@ namespace Flashcard_App_Gallup
 			this.lbl_description.TabIndex = 6;
 			this.lbl_description.Text = "";
 			// 
+			// btn_addcard
+			// 
+			this.btn_addcard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.btn_addcard.Location = new System.Drawing.Point(343, 12);
+			this.btn_addcard.Name = "btn_addcard";
+			this.btn_addcard.Size = new System.Drawing.Size(116, 48);
+			this.btn_addcard.TabIndex = 7;
+			this.btn_addcard.Text = "Add Card";
+			this.btn_addcard.UseVisualStyleBackColor = true;
+			this.btn_addcard.Click += new System.EventHandler(this.btn_addcard_Click);
+			// 
 			// DeckPrefab
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ButtonShadow;
 			this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.Controls.Add(this.btn_addcard);
 			this.Controls.Add(this.lbl_description);
 			this.Controls.Add(this.btn_delete);
 			this.Controls.Add(this.btn_study);
@@ -123,5 +136,6 @@ namespace Flashcard_App_Gallup
 		private System.Windows.Forms.Button btn_study;
 		private System.Windows.Forms.Button btn_delete;
 		private System.Windows.Forms.RichTextBox lbl_description;
+		private System.Windows.Forms.Button btn_addcard;
 	}
 }

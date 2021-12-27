@@ -34,6 +34,8 @@ namespace Flashcard_App_Gallup.Prefabs
 			// 
 			// panel1
 			// 
+			this.panel1.AutoScroll = true;
+			this.panel1.AutoSize = true;
 			this.panel1.Location = new System.Drawing.Point(25, 25);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(850, 450);
@@ -43,10 +45,12 @@ namespace Flashcard_App_Gallup.Prefabs
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScroll = true;
 			this.Controls.Add(this.panel1);
 			this.Name = "EditDisplayPrefab";
 			this.Size = new System.Drawing.Size(900, 500);
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 

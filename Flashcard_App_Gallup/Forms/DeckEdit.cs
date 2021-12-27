@@ -44,7 +44,7 @@ namespace Flashcard_App_Gallup.Forms
 		{
 			txt_name.Text = deck.GetName();
 			txt_description.Text = deck.GetDescription();
-			display = new EditDisplayPrefab(deck) { Dock = DockStyle.Fill };
+			display = new EditDisplayPrefab(deck, this) { Dock = DockStyle.Fill };
 			lbl_name.Text = deck.GetName();
 			this.panel1.Controls.Add(display);
 			this.display.Show();

@@ -40,7 +40,7 @@ namespace Flashcard_App_Gallup
 			{
 				this.Show();
 			}
-			display = new DeckDisplayPrefab(Data.GetDecks()) {Dock = DockStyle.Fill};
+			display = new DeckDisplayPrefab(Data.GetDecks(), this) {Dock = DockStyle.Fill};
 			this.pnl_decklist.Controls.Add(display);
 			this.display.Show();
 
@@ -51,10 +51,5 @@ namespace Flashcard_App_Gallup
 			Application.Exit();
 		}
 
-		public void CreateError()
-		{
-			Form form = new ErrorPrompt();
-			form.ShowDialog();
-		}
 	}
 }

@@ -68,6 +68,7 @@ namespace Flashcard_App_Gallup.Forms
 			}
 			else
 			{
+				this.Close();
 				Data.home.CustomRefresh();
 			}
 		}

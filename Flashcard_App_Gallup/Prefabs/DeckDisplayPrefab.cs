@@ -12,13 +12,15 @@ namespace Flashcard_App_Gallup.Prefabs
 	{
 		List<DeckPrefab> displayedPrefabs;
 		List<Deck> decks;
-		public DeckDisplayPrefab(Deck[] decks)
+		Form form;
+		public DeckDisplayPrefab(Deck[] decks, Form f)
 		{
 			InitializeComponent();
 			if(decks.Length != 0)
 			{
 				this.decks = new List<Deck>();
 				this.displayedPrefabs = new List<DeckPrefab>();
+				form = f;
 				SetDecks(decks);
 				DisplayPrefabs();
 			}
@@ -37,7 +39,7 @@ namespace Flashcard_App_Gallup.Prefabs
 					height += 190; // 190 is the height of the DeckPrefab
 				}
 
-				notDisplayedPrefabs[i] = new DeckPrefab(decks[i]);
+				notDisplayedPrefabs[i] = new DeckPrefab(decks[i], form);
 				displayedPrefabs.Add(notDisplayedPrefabs[i]);
 				displayedPrefabs[i].Top = height;
 				this.pnl_container.Controls.Add(displayedPrefabs[i]);

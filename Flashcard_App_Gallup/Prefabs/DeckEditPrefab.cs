@@ -13,10 +13,12 @@ namespace Flashcard_App_Gallup.Prefabs
 	{
 		private Flashcard card;
 		private Deck deck;
-		public DeckEditPrefab(Deck d, Flashcard c)
+		private Form form;
+		public DeckEditPrefab(Deck d, Flashcard c, Form f)
 		{
 			InitializeComponent();
 			deck = d;
+			form = f;
 			card = c;
 			SetCard();
 		}
@@ -31,7 +33,8 @@ namespace Flashcard_App_Gallup.Prefabs
 		{
 			deck.DeleteCard(card);
 			Data.UpdateDeck(deck);
-			Parent.Parent.Refresh();
+			form.Close();
+			Data.home.CustomRefresh();
 		}
 
 		public Flashcard GetCard()

@@ -97,7 +97,7 @@ namespace Flashcard_App_Gallup.Forms
 			this.pnl_container.AutoScroll = true;
 			this.pnl_container.Location = new System.Drawing.Point(12, 130);
 			this.pnl_container.Name = "pnl_container";
-			this.pnl_container.Size = new System.Drawing.Size(860, 525);
+			this.pnl_container.Size = new System.Drawing.Size(860, 569);
 			this.pnl_container.TabIndex = 5;
 			// 
 			// lbl_cardcount

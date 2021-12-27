@@ -29,8 +29,11 @@ namespace Flashcard_App_Gallup.Forms
 			deck.AddFlashcard(new Flashcard(txt_front.Text, txt_back.Text));
 			Data.UpdateDeck(deck);
 			this.Close();
-			form.Close();
 			Data.home.CustomRefresh();
+			if (form != Data.home)
+			{
+				form.Close();
+			}
 		}
 	}
 }

@@ -12,9 +12,11 @@ namespace Flashcard_App_Gallup
 	public partial class DeckPrefab : UserControl
 	{
 		private Deck deck;
-		public DeckPrefab(Deck deck)
+		private Form form;
+		public DeckPrefab(Deck deck, Form f)
 		{	
 			InitializeComponent();
+			this.form = f;
 			SetDeck(deck);
 		}
 
@@ -59,6 +61,12 @@ namespace Flashcard_App_Gallup
 			Data.home.Hide();
 			Form form = new DeckStudy(deck);
 			form.ShowDialog();
+		}
+
+		private void btn_addcard_Click(object sender, EventArgs e)
+		{
+			Form f = new AddCard(form, deck);
+			f.ShowDialog();
 		}
 	}
 }
