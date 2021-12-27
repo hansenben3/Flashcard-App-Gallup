@@ -12,23 +12,24 @@ namespace Flashcard_App_Gallup
 			(Environment.SpecialFolder.CommonApplicationData);
 		private static string path = Path.Combine(savePathString, "save.txt");
 
-		public static void SaveData(string data)
+		public static void SaveData(Deck[] data)
 		{
 			BinaryFormatter formatter = new BinaryFormatter();
 			FileStream stream = new FileStream(path, FileMode.Create);
-
 			formatter.Serialize(stream, data);
 			stream.Close();
 		}
 
-		public static string LoadData()
+		public static Deck[] LoadData()
 		{
 			if (File.Exists(path))
 			{
 				BinaryFormatter formatter = new BinaryFormatter();
 				FileStream stream = new FileStream(path, FileMode.Open);
 
-				string data = formatter.Deserialize(stream) as string;
+				Deck[] data = formatter.Deserialize(stream) as Deck[];
+
+				//string data = formatter.Deserialize(stream) as string;
 
 				stream.Close();
 				return data;

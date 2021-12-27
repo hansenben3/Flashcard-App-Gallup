@@ -66,6 +66,10 @@ namespace Flashcard_App_Gallup
 
 		public static void SaveData()
 		{
+
+			SaveManager.SaveData(decks.ToArray());
+
+			/*
 			if(decks.Count != 0)
 			{
 				string toBeSaved = CustomSerializer.Serialize(decks[0]);
@@ -73,12 +77,25 @@ namespace Flashcard_App_Gallup
 				{
 					toBeSaved += "<mainSplit>" + CustomSerializer.Serialize(decks[i]);
 				}
+
 				SaveManager.SaveData(toBeSaved);
 			}
+			*/
 		}
 
 		public static void LoadData()
 		{
+			Deck[] dks = SaveManager.LoadData();
+			decks = new List<Deck>();
+			if(dks != null)
+			{
+				for(int i = 0; i < dks.Length; i++)
+				{
+					decks.Add(dks[i]);
+				}
+			}
+
+			/*
 			string returnedString = SaveManager.LoadData();
 			decks = new List<Deck>();
 			if(returnedString != null)
@@ -89,6 +106,7 @@ namespace Flashcard_App_Gallup
 					decks.Add(CustomSerializer.Deserialize(arr[i]));
 				}
 			}
+			*/
 		}
 
 		public static void UpdateDeck( Deck newDeck)

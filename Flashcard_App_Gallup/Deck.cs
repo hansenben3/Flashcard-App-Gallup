@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Flashcard_App_Gallup
 {
+	[Serializable]
 	public class Deck
 	{
 		private int deckId;
